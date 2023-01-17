@@ -1,12 +1,15 @@
 import React from 'react'
 import "./style.css"
 
-const Input = () => {
+const Input = ({label, onChange , errorMessage ,...others}) => {
+
+   
+
   return (
     <div className='inputField'>
-        <label>Label</label>
-        <input type="text" />
-        <span>Error Message</span>
+        <label>{label}</label>
+        <input {...others} onChange={onChange}    />
+        <span>{errorMessage}</span>
     </div>
   )
 }
